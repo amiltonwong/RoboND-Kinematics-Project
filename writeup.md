@@ -59,6 +59,7 @@ Robotic Arm - Pick & Place Project
 [R_3_6-calc-LHS-2]: ./readme_images/R_3_6-calc-LHS-2.png
 [y]: ./readme_images/y.png
 [P_small]: ./readme_images/p.png
+[result]: ./readme_images/result.png
 
 ![Start][start]
 
@@ -205,12 +206,11 @@ We then analyze the left and right hand sides of the equation above independentl
 
 ## Project Implementation
 
-The code has been commented to explain the sequence of steps used. We follow the same logic described previously.
+The code `IK_server.py` has been commented to explain the sequence of steps used. We follow the same logic described previously.
 The following has been observed during the development of this project:
 
 - The difference of convention between urdf and DH parameters can make it difficult to find the correct values. In particular the correction matrix to rotate from local DH frame to URDF at end effector was not obvious. Displaying local frames can help.
 - Using the sympy library helps visualize the equations and see possible ways to find the angles of the joints. It also let us confirm which variable should be constant and the positive direction of angles, helping a lot in debugging.
 
-
-
 The code succeeds in picking correctly the objects and dropping them in the cylinder. 
+![result][result]
